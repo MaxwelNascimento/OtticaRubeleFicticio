@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.playFair {
+    font-family: 'Playfair';
+}
+
+.relative {
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    height: 5%;
+    background-color: #EFF1ED;
+    position: relative;
+    z-index: 1;
+}
+
+header > a {
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: #505A5B;
+    font-weight: 600;
+    padding: 1.6em;
+}
+
+header > a:hover {
+    color: #D36060;
+    text-decoration: underline;
+}
+
+header > a:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #505A5B;
+    color: #EFF1ED;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    width: 12rem;
+    text-decoration: none;
+}
+
+header > a:last-child:hover{
+    background-color: #D36060;
+}
+
+main .secOne {
+    /* position: absolute;
+        Erro descoberto , tava ultrapassando as divs
+    */ 
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+main .secOne-text {
+    /* z-index: 1; */
+    top: 50%;  
+    left: 70%; 
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+main .secOne-text > h1 {
+    font-size: 6rem;
+    color: #EFF1ED;
+}
+
+main .secOne-text > p {
+    font-size: 2rem;
+    color: #EFF1ED;
+}
+
+
+
+main .secTwo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #505A5B;
+    width: 100%;
+}
+
+main .secTwo > div:first-child {
+    /* background-color: #D36060; */
+    height: 130vh;
+    width: 50%;
+    position: relative;
+}
+
+main .secTwo > div:first-child > img {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 2em;
+    width: 50%;
+}
+
+main .secTwo > div:last-child {
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 50%;
+}
+
+main .secTwo > div:last-child > div:first-child {
+    max-width: 80%;
+}
+
+main .secTwo > div:last-child > div:first-child > p:first-child {
+    letter-spacing:0.2rem;
+    color: #505A5B;
+    font-size: 1.2em;
+}
+
+main .secTwo > div:last-child > div:first-child > h6 {
+    margin-top: 0.8rem;
+    font-weight: 700;
+    font-family: 'Playfair';
+    line-height: 3.4rem;
+    font-size: 4em;
+}
+
+
+main .secTwo > div:last-child > div:first-child > p:last-child {
+    margin-top: 0.8rem;
+    text-align: start;
+    font-size: 1.2em;
+}
+
+main .secTree {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 130vh;
+    background-color: #505A5B;
+}
+
+main .secTree .secTree-boxOne {
+    /* background-color: rgba(0, 0, 0, 0.05); */
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+main .secTree-boxText {
+    /* background-color: #D36060; */
+    margin-left: 2em;
+    height: 50%;
+    padding:0em 2em;
+}
+
+
+main .secTree .secTree-boxOne > .secTree-boxText > p:first-child {
+    letter-spacing:0.2rem;
+    color: #fff;
+    font-size: 0.8em;
+}
+
+main .secTree .secTree-boxOne #tituloSecTree {
+    margin-top: 0.8rem;
+    color: #fff;
+    font-weight: 700;
+    font-family: 'Playfair';
+    font-size: 3rem;
+}
+
+main .secTree .secTree-boxOne > .secTree-boxText > p:last-child {
+    margin-top: 0.8rem;
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    max-width: 100%;
+}
+
+main .secTree .secTree-boxOne > h6 {
+    letter-spacing:0.1rem;
+    color: #505A5B;
+    font-size: 0.7rem;
+}
+
+main .secTree .secTree-boxTwo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    /* background-color: aquamarine; */
+}
+
+main .secTree .secTree-boxTwo > img {
+    border-radius: 2em;
+    width: 50%;
+}
+
+
+main .secTree .secTree-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -5em;
+    width: 60%;
+    /* background-color: #D36060; */
+    
+}
+
+main .secTree .secTree-footer > h6 {
+    font-weight: 700;
+    font-family: 'Playfair';
+    font-size: 1.5rem;
+    color: #EFF1ED;
+}
+
+main .secTree .secTree-footer-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+    gap: 5em;
+}
+
+main .secTree .secTree-footer-logos > img{
+    width: 12%;
+}
+
+main .secTree .secTree-footer-logos > img:hover{
+    transform: rotate(-5deg);
+    opacity: 0.8;
+}
+
+main .secFour {
+    /* background-color: #D36060; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 130vh;
+}
+
+main .secFour > div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main .secFour > div:first-child > img{
+    margin-bottom: 5em;
+    width: 80%;
+    border-radius: 2em;
+}
+
+main .secFour > div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 40%;
+}
+
+main .secFour > div:last-child > p:first-child{
+    letter-spacing:0.2rem;
+    color: #505A5B;
+    font-size: 0.8em;
+    margin-bottom: 1rem;
+}
+
+main .secFour > div:last-child > h6 {
+    font-weight: 700;
+    font-family: 'Playfair';
+    font-size: 3rem;
+    color: #505A5B;
+    margin-bottom: 1rem;
+}
+
+main .secFour > div:last-child > p {
+    font-size: 1.1rem;
+    color: #505A5B;
+    margin-bottom: 1rem;
+}
+
+main .secFour > div:last-child > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: #EFF1ED;
+    background-color: #505A5B;
+    padding: 0.9rem;
+    border-radius: 0.4em;
+    font-size: 0.8rem;
+    height: 3em;
+    font-weight: bold;
+    margin: 1em 0em;
+}
+
+main .secFour > div:last-child > button:hover {
+    background-color: #D36060;
+    margin: 1em 0em;
+    width: 40%;
+    
+}
+
+main .secFive {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #505A5B;
+    gap: 4em 10em;
+    height: 50vh;
+    padding-top: 7em;
+}
+
+main .secFive .secFive-ColOne,
+main .secFive .secFive-ColTwo,
+main .secFive .secFive-ColTree{
+    display: flex;
+    flex-direction: column;
+}
+
+main .secFive .secFive-ColOne > a,
+main .secFive .secFive-ColTwo > a,
+main .secFive .secFive-ColTree > a{
+    text-decoration: none;
+    color: #E8EBE4;
+}
+
+
+.secFive-footer {
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #505A5B;
+    padding: 1em;
+}
