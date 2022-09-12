@@ -2,7 +2,6 @@
 @use './mixins' as *;
 
 .main{
-
     @include container;
 
     &-section{
@@ -13,12 +12,27 @@
         background-size: cover;
         height: 100vh;
 
+        @include mobile {
+            grid-area: 1/1/1/1;
+
+            .span{
+                display: none;
+            }
+        }
+
         &-text{
             @include flex-center;
             flex-direction: column;
             align-items: flex-start;
             height: 100%;
             font-size: 1.5rem;
+
+            @include mobile {
+                width: 100vw;
+
+                justify-content: center;
+                align-items: center
+            }
 
             h2{
                 @include font-playfair;
@@ -27,6 +41,11 @@
                 font-size: 5rem;
                 max-width: 50%;
                 margin-bottom: 1rem;
+
+                @include mobile {
+                    text-align: center;
+                    max-width: 100%;
+                }
             }
 
             p {
@@ -34,6 +53,11 @@
                 font-size: 1.8rem;
                 font-weight: 200;
                 max-width: 50%;
+
+                @include mobile {
+                    text-align: center;
+                    max-width: 100%;
+                }
                 
             }
         }
@@ -43,8 +67,15 @@
         height: 100vh;
         @include grid-two-columns;
         
+        @include mobile {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2,1fr);   
+        }
+
         &-img{
             @include flex-center;   
+
+            
             img{
                 width: 50%;
             }
@@ -55,11 +86,21 @@
             flex-direction: column;
             align-items: flex-start;
 
+            @include mobile {
+                align-items: center;
+                max-width: 90%;
+                width: 100%;
+            }
+
             .p-titulo{
                 font-weight: 600;
                 font-size: 1rem;
                 text-transform: uppercase;
                 letter-spacing: .2rem;
+
+                @include mobile {
+                    max-width: 90%
+                }   
             }
 
             .p-conteudo{
@@ -69,12 +110,20 @@
                 line-height: 3rem;
                 max-width: 60%;
                 margin: 1rem 0 2rem 0;
+
+                @include mobile {
+                    max-width: 90%;
+                }
             }
 
             .p-descricao{
                 font-size: 1rem;
                 max-width: 60%;
                 line-height: 2rem;
+
+                @include mobile {
+                    max-width: 90%;
+                }
             }
         }
     }
@@ -91,11 +140,20 @@
             @include grid-two-columns;
             height: 80%;
 
+            @include mobile {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(2,1fr);   
+            }
+
             &-text{
                 @include flex-center;
                 flex-direction: column;
                 align-items: flex-start;
                 margin-left: 20%;
+
+                @include mobile {
+                    margin: 5% 5% 20% 5%;   
+                }
 
                 .p-titulo{
                     font-weight: 600;
@@ -122,9 +180,16 @@
             &-img{
                 @include flex-center;
 
+                @include mobile {
+                    order: -1;
+                }
                 img{
                     border-radius: 1rem;
                     width: 60%;
+                    
+                    @include mobile {
+                        width: 70%;   
+                    }
                 }
             }
         }
@@ -145,6 +210,11 @@
             &-logos{
                 @include flex-center;
                 gap: 4rem;
+                margin-top: 2%;
+
+                @include mobile {
+                gap: 2rem;
+                }
 
                 img {
                     margin-top: 1rem;
@@ -165,11 +235,20 @@
         @include grid-column;
         height: 120vh;
 
+        @include mobile {
+            grid-template-columns: 1fr;
+            grid-template-rows: 25rem 1fr;   
+        }
+
         &-img{
             @include flex-center;
     
             img{
                 width: 60%;
+
+                @include mobile {
+                    width: 90%;
+                }
             }
         }
 
@@ -178,6 +257,10 @@
             max-width: 50%;
             flex-direction: column;
             align-items: flex-start;
+
+            @include mobile {
+                max-width: 90%;
+            }
 
             .p-titulo{
                 font-weight: 600;
@@ -198,6 +281,10 @@
                 font-size: 1rem;
                 max-width: 80%;
                 line-height: 2rem;
+
+                @include mobile {
+                    max-width: 100%;
+                }
             }
 
             .btn{
@@ -213,6 +300,10 @@
 
                 &:hover{
                     background-color: $link-color;
+                    width: 50%;
+                }
+
+                @include mobile {
                     width: 50%;
                 }
             }

@@ -11,7 +11,12 @@
         @include grid-tree-columns;    
         padding: 3rem;
         background-color: $primary-color;
-
+    
+        @include mobile {
+            grid-column-gap: 2rem;
+                    
+        }
+    
         &-one{
             @include flex-center;
             align-items: flex-start;
@@ -86,6 +91,9 @@
         @include flex-center;
         flex-direction: column;
         padding: 1rem;
+        p{
+            text-align: center;
+        }
         &-text{
             color: $secondary-color;
             font-weight: 800;
