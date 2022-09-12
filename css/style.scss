@@ -1,0 +1,20 @@
+@use './variables' as *;
+@use './mixins' as *;
+@use './header' as *;
+@use './main' as *;
+@use './footer' as *;
+
+* {
+    @include reset;
+    font-family: 'Inter' , sans-serif;
+
+    color: $primary-color;
+}
+
+body {
+
+    a{
+        text-decoration: none;
+    }
+    
+}

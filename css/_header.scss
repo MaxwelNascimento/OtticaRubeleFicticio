@@ -1,0 +1,57 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+
+.header {
+    @include container;
+
+    &-navbar{
+        padding: 1rem;
+        background-color: $secondary-color;
+        height: 100%;
+        
+        ul{
+            @include flex-center;
+            gap: 2rem;
+            list-style: none;
+            height: 100%;
+
+            li {    
+
+                a {
+                    position: relative;
+                    transition: .4s;
+                    background-image: linear-gradient(90deg, $link-color, $link-color);
+                    background-repeat: no-repeat;
+                    background-position: left bottom;
+                    background-size: 0% 1px;
+                    font-size: 1rem;
+
+                    &:hover{
+                        color: $link-color;
+                        background-size: 100% 1.5px;
+                    }
+
+                }
+
+                .active{
+                    color: $link-color;
+                    text-decoration: underline;
+                }
+
+                #btnNavbar{
+                    background-color: $primary-color;
+                    color: $secondary-color;
+                    padding: .5rem 1rem;
+                    border-radius: .4rem;
+
+                    background-size: 0;
+
+                    &:hover{
+                        background-color: $link-color;
+                    }
+                }
+            }
+        }
+    }
+}

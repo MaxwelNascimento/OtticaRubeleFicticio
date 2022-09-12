@@ -1,0 +1,50 @@
+@use './variables' as *;
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@mixin grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr) 1.5fr;
+    grid-template-rows: 1fr;
+}
+
+@mixin grid-column {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2,1fr);
+    place-items: center;
+}
+
+@mixin grid-two-columns {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr;
+}
+
+@mixin grid-tree-columns {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: 1fr;
+}
+
+@mixin font-playfair {
+    font-family: 'Playfair Display', serif;
+    font-weight: normal;
+}
+
+@mixin reset {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin container {
+    max-width: $container-width;
+    margin: 0 auto;
+}
+

@@ -1,0 +1,222 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+.main{
+
+    @include container;
+
+    &-section{
+        @include grid;
+        background-image: url('../img/fundo.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+
+        &-text{
+            @include flex-center;
+            flex-direction: column;
+            align-items: flex-start;
+            height: 100%;
+            font-size: 1.5rem;
+
+            h2{
+                @include font-playfair;
+                font-weight: 700;
+                color: $secondary-color;
+                font-size: 5rem;
+                max-width: 50%;
+                margin-bottom: 1rem;
+            }
+
+            p {
+                color: $secondary-color;
+                font-size: 1.8rem;
+                font-weight: 200;
+                max-width: 50%;
+                
+            }
+        }
+    }
+
+    &-section-two{
+        height: 100vh;
+        @include grid-two-columns;
+        
+        &-img{
+            @include flex-center;   
+            img{
+                width: 50%;
+            }
+        }
+
+        &-text{
+            @include flex-center;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .p-titulo{
+                font-weight: 600;
+                font-size: 1rem;
+                text-transform: uppercase;
+                letter-spacing: .2rem;
+            }
+
+            .p-conteudo{
+                @include font-playfair;
+                font-weight: 700;
+                font-size: 3rem;
+                line-height: 3rem;
+                max-width: 60%;
+                margin: 1rem 0 2rem 0;
+            }
+
+            .p-descricao{
+                font-size: 1rem;
+                max-width: 60%;
+                line-height: 2rem;
+            }
+        }
+    }
+    
+    &-section-tree{
+        height: 120vh;
+        background-color: $primary-color;
+        
+        p,h2 {
+            color: $secondary-color;
+        }
+
+        &-col{
+            @include grid-two-columns;
+            height: 80%;
+
+            &-text{
+                @include flex-center;
+                flex-direction: column;
+                align-items: flex-start;
+                margin-left: 20%;
+
+                .p-titulo{
+                    font-weight: 600;
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                    letter-spacing: .2rem;
+                }
+    
+                .p-conteudo{
+                    @include font-playfair;
+                    font-weight: 700;
+                    font-size: 3rem;
+                    line-height: 3rem;
+                    margin: 1rem 0 2rem 0;
+                }
+    
+                .p-descricao{
+                    font-size: 1rem;
+                    max-width: 80%;
+                    line-height: 2rem;
+                }
+            }
+            
+            &-img{
+                @include flex-center;
+
+                img{
+                    border-radius: 1rem;
+                    width: 60%;
+                }
+            }
+        }
+
+        
+
+        &-footer{
+            @include flex-center;
+            flex-direction: column;
+            justify-content: end;
+
+            h2{
+                @include font-playfair;
+                font-weight: 700;
+                font-size: 1.3rem;
+            }
+
+            &-logos{
+                @include flex-center;
+                gap: 4rem;
+
+                img {
+                    margin-top: 1rem;
+                    width: 13%;
+                    transition: .2s;
+
+                    &:hover{
+                        transform: rotate(-5deg);
+                        width: 13.4%;
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+
+    &-section-four{
+        @include grid-column;
+        height: 120vh;
+
+        &-img{
+            @include flex-center;
+    
+            img{
+                width: 60%;
+            }
+        }
+
+        &-text{
+            @include flex-center;
+            max-width: 50%;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .p-titulo{
+                font-weight: 600;
+                font-size: 1rem;
+                text-transform: uppercase;
+                letter-spacing: .2rem;
+            }
+
+            .p-conteudo{
+                @include font-playfair;
+                font-weight: 700;
+                font-size: 3rem;
+                line-height: 3rem;
+                margin: 1rem 0 2rem 0;
+            }
+
+            .p-descricao{
+                font-size: 1rem;
+                max-width: 80%;
+                line-height: 2rem;
+            }
+
+            .btn{
+                background-color: $primary-color;
+                color: $secondary-color;
+                padding: .5rem 1rem;
+                border-radius: .4rem;
+                border: none;
+                margin: 5% 0 5% 0;
+                font-size: 1rem;
+                transition: .4s;
+                width: 30%;
+
+                &:hover{
+                    background-color: $link-color;
+                    width: 50%;
+                }
+            }
+
+        }
+    }
+}
