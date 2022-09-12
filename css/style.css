@@ -2,6 +2,11 @@
   max-width: 100vw;
   margin: 0 auto;
 }
+@media (max-width: 450px) {
+  .header {
+    height: 6vh;
+  }
+}
 .header-navbar {
   padding: 1rem;
   background-color: #EFF1ED;
@@ -85,6 +90,7 @@
 @media (max-width: 450px) {
   .main-section {
     grid-area: 1/1/1/1;
+    height: 94vh;
   }
   .main-section .span {
     display: none;

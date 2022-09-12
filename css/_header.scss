@@ -5,6 +5,10 @@
 .header {
     @include container;
 
+    @include mobile {
+        height: calc(100vh - 94vh);       
+    }
+
     &-navbar{
         padding: 1rem;
         background-color: $secondary-color;

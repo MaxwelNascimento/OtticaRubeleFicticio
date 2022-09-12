@@ -15,6 +15,8 @@
         @include mobile {
             grid-area: 1/1/1/1;
 
+            height: calc(100vh - 6vh);
+            
             .span{
                 display: none;
             }
